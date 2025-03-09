@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton;
+namespace vbergerondev\FluxTables;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use VendorName\Skeleton\Commands\SkeletonCommand;
+use vbergerondev\FluxTables\Commands\FluxTablesCommand;
 
-class SkeletonServiceProvider extends PackageServiceProvider
+class FluxTablesServiceProvider extends PackageServiceProvider
 {
     public function configurePackage(Package $package): void
     {
@@ -16,10 +16,10 @@ class SkeletonServiceProvider extends PackageServiceProvider
          * More info: https://github.com/spatie/laravel-package-tools
          */
         $package
-            ->name('skeleton')
+            ->name('flux-tables')
             ->hasConfigFile()
             ->hasViews()
-            ->hasMigration('create_migration_table_name_table')
-            ->hasCommand(SkeletonCommand::class);
+            ->hasMigration('create_flux_tables_table')
+            ->hasCommand(FluxTablesCommand::class);
     }
 }
