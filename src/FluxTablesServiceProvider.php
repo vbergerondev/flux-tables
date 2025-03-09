@@ -4,7 +4,6 @@ namespace vbergerondev\FluxTables;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use vbergerondev\FluxTables\Commands\FluxTablesCommand;
 
 class FluxTablesServiceProvider extends PackageServiceProvider
 {
@@ -18,8 +17,6 @@ class FluxTablesServiceProvider extends PackageServiceProvider
         $package
             ->name('flux-tables')
             ->hasConfigFile()
-            ->hasViews()
-            ->hasMigration('create_flux_tables_table')
-            ->hasCommand(FluxTablesCommand::class);
+            ->hasViews();
     }
 }
